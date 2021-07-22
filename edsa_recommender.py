@@ -104,22 +104,22 @@ def main():
         st.title("Solution Overview")
         st.write("We used two recommendation approaches for this App i.e. Content Based Filtering which recommend movies based on movie similarity and and collaborative Based Filtering which recommend movies based on users  user similarity")
         st.title("Content Based Filtering")
-        st.image('resources/imgs/EDSA_logo.png',use_column_width=True)#put the correct one
+        
         st.write("This filtration strategy is based on the data provided about the items. The algorithm recommends products that are similar to the ones that a user has liked in the past.\
         This similarity (generally cosine similarity) is computed from the data we have about the items as well as the user’s past preferences. \
         For example, if a user likes movies such as 'The Hobbits' then we can recommend him movies with the genre Adventure or maybe even movies directed by Peter Jackson.")
         st.title("Collaborative Based Filtering")
-        st.image('resources/imgs/EDSA_logo.png',use_column_width=True)#put the correct one
         st.write("This filtration strategy is based on the combination of the user’s behavior and comparing and contrasting that with other users’ behavior in the database. It makes recommendations based on movies that those users rated.")
     
     if page_selection == "About The App":
         #st.image(("resources/imgs/team6.PNG", format='PNG')
-        st.image('resources/imgs/team_ae.png',use_column_width=True)
+        st.image('resources/imgs/team_ae.PNG',use_column_width=True)
         st.title("About The App") 
         st.markdown(""" Team AE6 has deployed Machine Learning Algorithm that are able to recommend good movies according to movie-lovers state and are able to answer the frustrating recurring question “What movies should I watch today?”.
         The algorithm deployed is able to recommend good movies based on Content-Based recommender and recommends movies based on relationship between various movies. 
         Puzzled by what you should you offer your Movie-lovers to watch from your Movie Site?
         Then this is the platform to explore and offer better alternative to your Movie-lover subscribers""")
+    
     
     # You may want to add more sections here for aspects such as an EDA,
     # or to provide your business pitch.
@@ -135,10 +135,7 @@ def main():
         if st.checkbox("Movie Insights"):
             st.subheader("Plots providing insights to Movies")
             st.write("The average movie runtime is 116.1 minutes which equates to ~1.9 hours.")
-            st.image('resources/imgs/team_ae.png',use_column_width=True)
-  
-            st.image('resources/imgs/team_ae.png',use_column_width=True)
-            st.image('resources/imgs/ae7.png',use_column_width=True)
+            st.image('resources/imgs/ae7.PNG',use_column_width=True)
             st.write("WordCloud for Movie Titles")
             st.image('resources/imgs/ae6.PNG',use_column_width=True)
             st.write("Plot above Showing the distribution of Genres")
@@ -146,7 +143,6 @@ def main():
             st.write("Plot above showing  top 20 top rated moviesost rated movies")
            
         
-       
         
     if page_selection == "App Developers Contacts":
         st.title('Project Members and their contact details')
