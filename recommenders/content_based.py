@@ -33,18 +33,20 @@ import pandas as pd
 import numpy as np
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import CountVectorizer
+#import re
 
 # Importing data
 movies = pd.read_csv('resources/data/movies.csv',delimiter=',')
 ratings = pd.read_csv('resources/data/ratings.csv')
 imdb =pd.read_csv('resources/data/imdb_data.csv')
+#tags = pd.read_csv('resources/data/tags.csv')
 movies.dropna(inplace=True)
 
 def data_preprocessing(subset_size):
     """Prepare data for use within Content filtering algorithm.
 
     Parameters
-    ----------
+    ---------- 
     subset_size : int
         Number of movies to use within the algorithm.
 
@@ -54,6 +56,14 @@ def data_preprocessing(subset_size):
         Subset of movies selected for content-based filtering.
 
     """
+    
+    
+    """This part of the function cleans the plot_keywords
+    """
+    #replacing separator with spaces
+    
+
+    
     df_movies2 = movies.merge(imdb, how='left')
     
     # Remove NaN values
@@ -69,10 +79,10 @@ def data_preprocessing(subset_size):
     return movies_subset
     
     # Split genre data into individual words.
-    #movies['keyWords'] = movies['genres'].str.replace('|', ' ')
+    movies['keyWords'] = movies['genres'].str.replace('|', ' ')
     # Subset of the data
-    #movies_subset = movies[:subset_size]
-    #return movies_subset
+    movies_subset = movies[:subset_size]
+    return movies_subset
 
 # !! DO NOT CHANGE THIS FUNCTION SIGNATURE !!
 # You are, however, encouraged to change its content.  
