@@ -126,38 +126,25 @@ def main():
     if page_selection == "Exploratory Data Analysis":
         st.title("Data Analysis Plots")
         if st.checkbox("Ratings insights"):
-            st.subheader("These plots give insights about the ratings given for the movies")
+            st.subheader("The plotts provide some insights to movie ratings")
            # st.image('resources/imgs/distribution_of_ratings.png',use_column_width=True)
-            st.write("This is a count of movies that have been given a certain rating with 5 being")
-            st.image('resources/imgs/ratingcount_per_user.png',use_column_width=True)
-            st.image('resources/imgs/rated1.png',use_column_width=True)
-            st.write("These are the 20 most rated movies. In the top 10 we only have movies from the 90s, with 1994 taking the top 3 spots.")
-            st.image('resources/imgs/rating_per_release_year.png',use_column_width=True)
+            st.write("Plot showing The distribution of ratings ")
+            st.image('resources/imgs/ae2.PNG',use_column_width=True)
+            
             
         if st.checkbox("Movie Insights"):
-            st.subheader("A number of factors influence movie choices and below we take a look at \
-                    some of those factors such as popular themes, actors, directors and era")
+            st.subheader("Plots providing insights to Movies")
             st.write("The average movie runtime is 116.1 minutes which equates to ~1.9 hours.")
             st.image('resources/imgs/team_ae.png',use_column_width=True)
-            st.write("Drama holds the most number of movies in the database followed by comedy and action.")
+  
             st.image('resources/imgs/team_ae.png',use_column_width=True)
-            st.write("The graph below shows the distribution on movies in the dataset. At first glance, \
-                it is clear that the 2010s have the highest number of movies released in one decade.")
-            st.image('resources/imgs/team_ae.png',use_column_width=True)
-            st.write("These are the most popular themes. The keywords are a reflection of the top 3 genres \
-                    in the database (drama, comedy and action). If you watch movies in these genres it is \
-                    likely that the movie will have these keywords and that is why these movies have high age \
-                    restictions. The keywords also show what themes people enjoy watching.")
-            st.image('resources/imgs/team_ae.png',use_column_width=True)
-            st.image('resources/imgs/team_ae.png',use_column_width=True)
-            st.write("The graph above shows the number of times movies with specific actors in the dataset \
-                    have been rated. Tom Hanks takes the lead with more than 195000 movie ratings to his name.\
-                    In second place is Samuel L.Jackson followed by Morgan Freeman in third place. It makes sense \
-                    that the top 3 actors with the most ratings associated with their names also star in the top \
-                    3 most rated movies (refer to 'most rated movies' section). It is important\
-                    to note that most of the movies in this database are American based and therefore \
-                    the most popular actors are American.")
-            st.image('resources/imgs/team_ae.png',use_column_width=True)    
+            st.image('resources/imgs/ae7.png',use_column_width=True)
+            st.write("WordCloud for Movie Titles")
+            st.image('resources/imgs/ae6.PNG',use_column_width=True)
+            st.write("Plot above Showing the distribution of Genres")
+            st.image('resources/imgs/ae3.PNG',use_column_width=True)
+            st.write("Plot above showing  top 20 top rated moviesost rated movies")
+           
         
        
         
